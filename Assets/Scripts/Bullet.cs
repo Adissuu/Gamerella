@@ -19,4 +19,16 @@ public class Bullet : MonoBehaviour
     {
         
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.SendMessage("TakeDamage");
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == "Wall")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
