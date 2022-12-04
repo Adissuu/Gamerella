@@ -668,6 +668,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4814107231349954043, guid: dc449de5c5d9741968929aa960f2d91f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: -4814107231349954043, guid: dc449de5c5d9741968929aa960f2d91f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 5391882244566099836, guid: dc449de5c5d9741968929aa960f2d91f, type: 3}
       propertyPath: player
       value: 
@@ -700,6 +708,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1205230777}
+    - target: {fileID: 7862240829977002851, guid: dc449de5c5d9741968929aa960f2d91f, type: 3}
+      propertyPath: default_mask
+      value: 
+      objectReference: {fileID: 21300000, guid: adf3fdf6830694282810b61837acfd9f, type: 3}
+    - target: {fileID: 7862240829977002851, guid: dc449de5c5d9741968929aa960f2d91f, type: 3}
+      propertyPath: profile_mask
+      value: 
+      objectReference: {fileID: 21300000, guid: 3af5635b45b694f99b7f1f17c89d301f, type: 3}
     - target: {fileID: 8194463773666364652, guid: dc449de5c5d9741968929aa960f2d91f, type: 3}
       propertyPath: m_RootOrder
       value: 6
