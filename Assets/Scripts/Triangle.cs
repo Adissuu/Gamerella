@@ -15,13 +15,15 @@ public class Triangle : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
     }
 
+    void FixedUpdate()
+    {
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.z = Input.GetAxisRaw("Vertical");
+        rigid.transform.position += new Vector3(input.x, input.z, 0) *speed;
+    }
     // Update is called once per frame
     void Update()
     {
-
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.z = Input.GetAxisRaw("Vertical");
-        rigid.transform.position += new Vector3(input.x, input.z, 0) *speed*Time.deltaTime;
         if(Input.GetKeyDown(KeyCode.Space ))
         {
             GameObject clone = Instantiate(prefab, transform.position, transform.rotation);
