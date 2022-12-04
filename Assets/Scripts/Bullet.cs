@@ -9,7 +9,6 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rigid;
     void Start()
     {
-        speed = 5;
         rigid = GetComponent<Rigidbody2D>();
         rigid.velocity = Vector2.right * speed;
     }
