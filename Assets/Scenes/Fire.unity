@@ -8785,6 +8785,10 @@ PrefabInstance:
       value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993708, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d76c4617eb69077439ddee064a7e6e6a, type: 3}
+    - target: {fileID: 826586533091993708, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
@@ -8798,23 +8802,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993709, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_LocalScale.x
-      value: 67.81149
+      value: 29.009756
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993709, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_LocalScale.y
-      value: 67.81149
+      value: 29.009756
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993709, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_LocalScale.z
-      value: 67.81149
+      value: 29.009756
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993709, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.8
+      value: 6.49
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993709, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.58
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993709, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8850,7 +8854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993711, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_Radius
-      value: 0.095
+      value: 0.245
       objectReference: {fileID: 0}
     - target: {fileID: 826586533091993711, guid: 92545c6b808b146c694bf83c4a2d9a50, type: 3}
       propertyPath: m_IsTrigger
