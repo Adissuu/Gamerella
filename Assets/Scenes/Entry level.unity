@@ -1510,12 +1510,12 @@ MonoBehaviour:
   textComponent: {fileID: 1305404412}
   lines:
   - Press "Space" to continue!
-  - Welcome to "Wonderer?"
+  - '[Welcome to "Far!"]'
   - '"WASD" are for moving, "Space" is for shooting!'
-  - Let the story begins!
-  - Sometimes in life, we hide ourselves away. Feeling the need to wear a mask.
-  - "Florian: \u201CNobody understands me. I want to go on a journey.\u201D"
-  - 'Florian: "I''m going my own way! This is my world to make!!"'
+  - '[Let the story begin!]'
+  - '[Sometimes in life, we hide ourselves away. Feeling the need to wear a mask.]'
+  - '"Hi I''m Florian! Nobody understands me."'
+  - '"I''m going my own way, this is my world to make!!"'
   textSpeed: 0.05
 --- !u!1 &1838833376
 GameObject:
