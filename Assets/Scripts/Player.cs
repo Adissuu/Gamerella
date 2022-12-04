@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,11 @@ public class Player : MonoBehaviour
     public GameObject prefab;
 
     private Animator _anim;
+    bool AlmostEquals(double double1, double double2, double precision)
+    {
+        return (Math.Abs(double1 - double2) <= precision);
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,18 +35,16 @@ public class Player : MonoBehaviour
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.z = Input.GetAxisRaw("Vertical");
-        Debug.Log(Input.GetAxisRaw("Horizontal"));
+        // Debug.Log(AlmostEquals(input.x, 0.0f, 0.00005));
         // Debug.Log(input.z);
         // Debug.Log(input.x != 0 || input.z != 0);
-        if ((input.x >= 0.1 && input.x <= -0.1) || (input.z >= 0.1 && input.z <= -0.1))
+        if ((AlmostEquals(input.x, 0.1f, 0.00005) && AlmostEquals(input.x, 0.1f, 0.00005)))
+            _anim.SetBool("isWalking", false);
+        else
         {
             _anim.SetFloat("movX", input.x);
             _anim.SetFloat("movY", input.z);
             _anim.SetBool("isWalking", true);
-        }
-        else
-        {
-            _anim.SetBool("isWalking", false);
         }
 
         rigid.transform.position += new Vector3(input.x, input.z, 0) *speed*Time.deltaTime;
