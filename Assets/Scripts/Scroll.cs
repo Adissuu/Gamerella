@@ -5,10 +5,12 @@ using UnityEngine;
 public class Scroll : MonoBehaviour
 {
     bool floatUp;
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         floatUp = true;
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class Scroll : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Scroll");
+            player.SendMessage("Riddle");
             Destroy(this.gameObject);
         }
     }

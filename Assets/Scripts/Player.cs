@@ -53,5 +53,10 @@ public class Player : MonoBehaviour
             GameObject clone = Instantiate(prefab, transform.position, transform.rotation);
         }
 
+
+    }
+    public void Riddle()
+    {
+        Debug.Log("Riddle");
     }
 }
