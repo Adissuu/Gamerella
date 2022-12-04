@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Triangle : MonoBehaviour
+public class Player : MonoBehaviour
 {
 
     Vector3 input;
