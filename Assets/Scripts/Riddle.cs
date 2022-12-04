@@ -18,7 +18,7 @@ public class Riddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("space")){
+        if(Input.GetKeyDown(KeyCode.E)){
             if(textComponent.text == lines[index])
             {
                 NextLine();
