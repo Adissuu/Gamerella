@@ -31,7 +31,7 @@ public class PlayerMask : MonoBehaviour
         input.y = Input.GetAxisRaw("Vertical");
 
         // Debug.Log(AlmostEquals(input.x, 0.1f, 0.00005));
-        if (_isTrigger && (input.x >= 0.00000001 || input.x <= -0.000001))
+        if (_isTrigger && input.x >= 0.00000001 || input.x <= -0.000001)
         {
             _rd.sprite = profile_mask;
             transform.localScale = scale_profile_mask;
