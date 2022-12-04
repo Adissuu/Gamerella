@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Enemy
   - Wall
+  - Mask
   layers:
   - Default
   - TransparentFX
@@ -61,4 +62,7 @@ TagManager:
     locked: 0
   - name: Scroll
     uniqueID: 1347800559
+    locked: 0
+  - name: Mask
+    uniqueID: 2621086319
     locked: 0

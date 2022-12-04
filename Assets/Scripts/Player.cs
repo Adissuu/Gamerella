@@ -7,7 +7,7 @@ using TMPro;
 public class Player : MonoBehaviour
 {
     public static event Action<Player> OnEnemyKilled;
-    [SerializeField] float health, maxHealth = 3f;
+    [SerializeField] float health, maxHealth = 4f;
     bool AlmostEquals(double double1, double double2, double precision)
     {
         return (Math.Abs(double1 - double2) <= precision);
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
-        rigid.AddForce(rigid.velocity,ForceMode2D.Impulse);
+ 
         Debug.Log($"Health: {health}");
         if (health <= 0)
         {
@@ -69,5 +69,16 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
             OnEnemyKilled?.Invoke(this);
         }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Vector3 direction = collision.contacts[0].point - new Vector2(transform.position.x,transform.position.y);
+            direction = -direction.normalized;
+            rigid.AddForce(direction* 10, ForceMode2D.Impulse);
+            TakeDamage(1);
+        }
+
     }
 }

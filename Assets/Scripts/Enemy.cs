@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public static event Action<Enemy> OnEnemyKilled;
+    public GameObject prefab;
     [SerializeField] float health, maxHealth = 3f;
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
@@ -44,17 +45,11 @@ public class Enemy : MonoBehaviour
         health -= damageAmount;
         Debug.Log($"Health: {health}");
         if(health <= 0){
+            Instantiate(prefab, new Vector3(13,-7,0),transform.rotation);
             Destroy(gameObject);
             OnEnemyKilled?.Invoke(this);
         }
     }
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<Player>().TakeDamage(1);
-        }
 
-    }
 
 }
