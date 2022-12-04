@@ -6,11 +6,13 @@ public class Scroll : MonoBehaviour
 {
     bool floatUp;
     private GameObject player;
+    private GameObject dialogue;
     // Start is called before the first frame update
     void Start()
     {
         floatUp = true;
         player = GameObject.Find("Player");
+        dialogue = GameObject.Find("Text (TMP)");
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class Scroll : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             player.SendMessage("Riddle");
+            dialogue.SendMessage("StartDialogue");
             Destroy(this.gameObject);
         }
     }
