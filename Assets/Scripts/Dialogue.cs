@@ -8,9 +8,11 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    private RectTransform _rt;
     // Start is called before the first frame update
     void Start()
     {
+        _rt = GetComponent<RectTransform>();
         textComponent.text = string.Empty;
         StartDialogue();
     }
@@ -19,6 +21,10 @@ public class Dialogue : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("space")){
+            if(index == 4){
+            _rt.offsetMin = new Vector2(138, 114); // left, bottom
+            _rt.offsetMax = new Vector2(-150, -190); // right , top
+            }
             if(textComponent.text == lines[index])
             {
                 NextLine();
