@@ -9,7 +9,6 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rigid;
     void Start()
     {
-        speed = 5;
         rigid = GetComponent<Rigidbody2D>();
         rigid.velocity = Vector2.right * speed;
     }
@@ -23,12 +22,14 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.SendMessage("TakeDamage");
+            collision.gameObject.SendMessage("TakeDamage",1.0);
+            Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
         if (collision.gameObject.tag == "Wall")
         {
             Destroy(this.gameObject);
         }
+
     }
 }
