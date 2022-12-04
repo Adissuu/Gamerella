@@ -27,6 +27,17 @@ public class Player : MonoBehaviour
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.z = Input.GetAxisRaw("Vertical");
+        _anim.SetFloat("movY", input.z);
+        _anim.SetFloat("movX", input.x);
+        if (input.z != 0 || input.x != 0)
+        {
+            _anim.SetBool("isWalking", true);
+
+        }
+        else
+        {
+            _anim.SetBool("isWalking", false);
+        }
         rigid.transform.position += new Vector3(input.x, input.z, 0) *speed;
     }
     // Update is called once per frame
